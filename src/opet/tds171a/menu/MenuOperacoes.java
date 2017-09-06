@@ -14,6 +14,12 @@ import opet.tds171a.banco.ContaPoupanca;
 import opet.tds171a.util.Leitor;
 import opet.tds171a.util.Util;
 
+/**
+ * 
+ * @author Israel Block
+ * @version 1.0.1
+ * @since 6 de set de 2017
+ */
 public class MenuOperacoes{
 	
 	/**
@@ -31,10 +37,16 @@ public class MenuOperacoes{
 	 */
 	protected ArrayList<ContaExtrato> extrato = new ArrayList<ContaExtrato>();
 	
+	/**
+	 * 
+	 */
 	public MenuOperacoes(){
 		iniciaConta();
 	}
 
+	/**
+	 * 
+	 */
 	private void iniciaConta(){
     	this.contaC.add(new ContaCorrente(1234));
     	this.contaP.add(new ContaPoupanca(5678));
@@ -44,7 +56,10 @@ public class MenuOperacoes{
 	 * operações de conta corrente
 	 */
 	
-	
+	/**
+	 * 
+	 * @param conta
+	 */
 	public void saldoCC(int conta){
     	for(ContaCorrente contaC : this.contaC){
     		if(contaC.getConta() == conta){
@@ -52,6 +67,12 @@ public class MenuOperacoes{
     		}
     	}
     }
+	
+	/**
+	 * 
+	 * @param conta
+	 * @throws ParseException
+	 */
     public void depositoCC(int conta) throws ParseException{
     	for(ContaCorrente contaC : this.contaC){
     		if(contaC.getConta() == conta){
@@ -73,6 +94,12 @@ public class MenuOperacoes{
     		}
     	}
     }
+    
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void saqueCC(int conta) throws ParseException{
     	for(ContaCorrente contaC : this.contaC){
     		if(contaC.getConta() == conta){
@@ -98,6 +125,11 @@ public class MenuOperacoes{
     		}
     	}
     }
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void transferenciaCC(int conta) throws ParseException {
     	for(ContaCorrente contaC : this.contaC){
     		if(contaC.getConta() == conta){
@@ -161,7 +193,10 @@ public class MenuOperacoes{
 	 * operações de conta poupanca
 	 */
     
-    
+    /**
+     * 
+     * @param conta
+     */
     public void saldoCP(int conta){
     	for(ContaPoupanca contaP : this.contaP){
     		if(contaP.getConta() == conta){
@@ -170,6 +205,11 @@ public class MenuOperacoes{
     		}
     	}
     }
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void depositoCP(int conta) throws ParseException{
     	for(ContaPoupanca contaP : this.contaP){
     		if(contaP.getConta() == conta){
@@ -192,6 +232,11 @@ public class MenuOperacoes{
     	}
     }
     
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void saqueCP(int conta) throws ParseException{
     	for(ContaPoupanca contaP : this.contaP){
     		if(contaP.getConta() == conta){
@@ -217,6 +262,11 @@ public class MenuOperacoes{
     		}
     	}
     }
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void transferenciaCP(int conta) throws ParseException {
     	for(ContaPoupanca contaP : this.contaP){
     		if(contaP.getConta() == conta){
@@ -276,7 +326,13 @@ public class MenuOperacoes{
     	}
     }
     
-    
+    /**
+     * 
+     * @param conta
+     * @param operacao
+     * @param resumo
+     * @throws ParseException
+     */
     private void salvaExtrato(int conta, String operacao, String resumo) throws ParseException {
     	/*DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		sdf.setLenient(false);*/
@@ -289,6 +345,11 @@ public class MenuOperacoes{
 		
 		extrato.add(new ContaExtrato(conta, operacao, Util.formataData_(df.format(dataAtual)), resumo));
     }
+    /**
+     * 
+     * @param conta
+     * @throws ParseException
+     */
     public void verificaExtrato(int conta) throws ParseException {
     	System.out.println("============================================");
     	System.out.println("              Extrato de conta              ");

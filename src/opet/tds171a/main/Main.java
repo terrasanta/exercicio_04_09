@@ -10,7 +10,6 @@ public class Main
 
     public static void main(String[] args) throws ParseException
     {
-        Conta conta = new Conta();
         Menu menu = new Menu();
         menu.inicio();
     }

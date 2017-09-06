@@ -2,15 +2,46 @@ package opet.tds171a.banco;
 
 import java.util.Date;
 
+/**
+ * 
+ * @author Israel Block
+ * @version 1.0.1
+ * @since 6 de set de 2017
+ */
 public class ContaExtrato {
 
+	/**
+	 * 
+	 */
 	private int conta;
+	
+	/**
+	 * 
+	 */
 	private String operacao;
+	
+	/**
+	 * 
+	 */
 	private Date data;
+	
+	/**
+	 * 
+	 */
 	private String resumo;
 	
+	/**
+	 * 
+	 */
 	private ContaExtrato() {
 	}
+	/**
+	 * 
+	 * @param conta
+	 * @param operacao
+	 * @param data
+	 * @param resumo
+	 */
 	public ContaExtrato(int conta, String operacao, Date data, String resumo){
 		setConta(conta);
 		setOperacao(operacao);

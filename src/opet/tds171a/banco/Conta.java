@@ -1,15 +1,28 @@
 package opet.tds171a.banco;
 
-
+/**
+ * 
+ * @author Israel Block
+ * @version 1.0.1
+ * @since 6 de set de 2017
+ */
 public class Conta
 {
-    
+    /**
+     * 
+     */
     private int conta;
+    /**
+     * 
+     */
     private double saldo;
 
+    /**
+     * 
+     */
     public Conta()
     {
-        
+    	//silence is gold
     }
 
     /**

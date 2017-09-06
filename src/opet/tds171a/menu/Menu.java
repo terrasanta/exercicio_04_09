@@ -8,8 +8,9 @@ import opet.tds171a.util.Leitor;
 
 /**
  * 
- * @author Israel
- *
+ * @author Israel Block
+ * @version 1.0.1
+ * @since 6 de set de 2017
  */
 public class Menu extends MenuOperacoes 
 {
